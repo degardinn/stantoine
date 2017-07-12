@@ -43,8 +43,10 @@ are the main guidelines concerning the new website:
 - The website makes use of **Bootstrap** to provide a reponsive base with a grid system
 - **SCSS** is used to generates the *CSS* files
 - A **Netbeans** project directory is set
-- It is planned (to be confirmed) to add the *python* framework **Django** + **DjangoCMS**
+- A **Visual Studio Code** project directory is set
+- **Python** framework **Django** + **DjangoCMS**
 - **jQuery** is available
+- **Dockerfile** to build and run the project as a container
 
 ### DjangoCMS
 
@@ -52,9 +54,9 @@ are the main guidelines concerning the new website:
 
 #### How to run the website
 
-1. first ensure that **Docker for Mac**/**Docker for Windows*** is installed. Refer to this tool instructions in case of need to run the **Docker** commands.
+1. first ensure that **Docker for Mac**/**Docker for Windows** is installed. Refer to this tool instructions in case of need to run the **Docker** commands.
 2. in a terminal, in the project root directory, run the following command to build a container: `docker build -t stantoine`. It has to be done only once. The container needs to be rebuilt only if the **Python** requirements (libraries installed with `pip`) change 
-3. in a terminal, run this command to start the server (under *MacOS*): `docker run -p 80:80 --rm --name stantoine -v $(pwd):/usr/src/app stantoine &`
+3. in a terminal, run this command to start the server (under *MacOS*): `docker run -p 80:80 --rm --name stantoine -v $(pwd):/usr/src/app stantoine`
 4. in a browser, access [http://localhost](http://localhost) to see the website
 5. In a terminal, run this command to see the server logs: `docker logs -f stantoine`
 
