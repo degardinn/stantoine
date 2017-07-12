@@ -84,7 +84,7 @@ body {
     }
     
     .image {
-        background-image: url("../img/slider_servicesactivities.jpg");
+        background-image: url("/static/img/slider_servicesactivities.jpg");
         min-height: 60vh;
     }
     
@@ -106,7 +106,7 @@ body {
 
 #services {
     .image { 
-        background-image: url("../img/slider_donations.jpg");
+        background-image: url("/static/img/slider_donations.jpg");
         min-height: 80vh;
     }
     
@@ -117,7 +117,7 @@ body {
 
 #who {
     .image {
-        background-image: url("../img/slider_volunteer.jpg");     
+        background-image: url("/static/img/slider_volunteer.jpg");     
         min-height: 80vh;
     }
     

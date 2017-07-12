@@ -46,14 +46,26 @@ are the main guidelines concerning the new website:
 - It is planned (to be confirmed) to add the *python* framework **Django** + **DjangoCMS**
 - **jQuery** is available
 
+### DjangoCMS
+
+/!\ **The site now relies on the Django framework and the DjangoCMS component. Consequently, the server has to run to serve files correctly (or the assets path may be incorrect: CSS, images, scripts etc...).**
+
+#### How to run the website
+
+1. first ensure that **Docker for Mac**/**Docker for Windows*** is installed. Refer to this tool instructions in case of need to run the **Docker** commands.
+2. in a terminal, in the project root directory, run the following command to build a container: `docker build -t stantoine`. It has to be done only once. The container needs to be rebuilt only if the **Python** requirements (libraries installed with `pip`) change 
+3. in a terminal, run this command to start the server (under *MacOS*): `docker run -p 80:80 --rm --name stantoine -v $(pwd):/usr/src/app stantoine &`
+4. in a browser, access [http://localhost](http://localhost) to see the website
+5. In a terminal, run this command to see the server logs: `docker logs -f stantoine`
+
 ### TODO
 - Improve the website look
 - Create a "our team" contact list based on the list in *Google Apps* (if feasible through the *Google API*)
 - Create the "photos" section (maybe a carousel) based on the content of a *Google Drive* directory (if feasible)
 - Create the "newsletter" section based on the content of a Google Drive directory (if feasible)
-- plug in the backend
 - create the views, along with the CMS editable fields
 - connect the forms
 - add everything necesary for SEO
 - ensure the website passes the W3C validation
 - surely other points... Wrote that a bit quickly.
+- find a cheap host that supports Python 3.4 or Docker containers, and deploy the website
