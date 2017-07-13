@@ -83,7 +83,7 @@ body {
     }
     
     .image {
-        background-image: url("/static/img/slider_servicesactivities.jpg");
+        background-image: url("/static/img/slider_servicesactivities.jpg"); 
         min-height: 60vh;
     }
     
@@ -98,7 +98,7 @@ body {
     }
       
     .text {
-        @include dotbackground(rgb(158,0,67), rgb(180, 0, 90));        
+        @include dotbackground(rgba(174,0,80, 1), rgba(185, 0, 90, 1));        
     }
 }
 
@@ -110,7 +110,7 @@ body {
     }
     
     .container.text{
-        @include dotbackground(green, rgb(100,255,100));
+        @include dotbackground(rgba(174,0,80, 1), rgba(185, 0, 90, 1));
     }
 }
 
@@ -121,7 +121,7 @@ body {
     }
     
     .container.text{
-        @include dotbackground(blue, rgb(100,100,255));
+        @include dotbackground(rgba(174,0,80, 1), rgba(185, 0, 90, 1));
     } 
 }
 
@@ -132,11 +132,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
-
-#map {
-    height: 400px;
-    width: 100%;
 }
 
 .caption span.border {
