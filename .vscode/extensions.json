@@ -5,6 +5,7 @@
 		"xyz.local-history",
 		"donjayamanne.githistory",
 		"eamodio.gitlens",
-		"robertohuertasm.vscode-icons"
+		"robertohuertasm.vscode-icons",
+		"bibhasdn.django-html"
 	]
 }

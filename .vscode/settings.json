@@ -4,7 +4,7 @@
     "liveSassCompile.settings.extensionName": ".css",
     "python.formatting.provider": "none",
     "python.linting.pylintEnabled": false,
-    "editor.formatOnSave": false,
+    "html.format.enable": false,
     "files.exclude": {
         "nbproject": true,
         "**/.git": true,
@@ -14,7 +14,7 @@
         "**/.DS_Store": true,
         "**/*.css": true,
         "**/*.map": true,
-        "**/__pycache__": true,                
+        "**/__pycache__": true,
         ".history": true,
         "project.db": true
     }
