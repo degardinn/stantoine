@@ -1,0 +1,158 @@
+{% extends "base-bootstrap.html" %}
+{% load cms_tags static sekizai_tags %}
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+{% block content %}
+    {% addtoblock "css" %}
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% endaddtoblock %}
+
+    {% addtoblock "js" %}
+        <script type="text/javascript" src="{% static 'js/jquery.parallax-1.1.3.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN92uddmW68ehReJViEsbW_fMP3fsXHqc&callback=initMap"></script>
+    {% endaddtoblock %}
+
+    <div id="mission" class="container section">
+        <div class="image">
+            <div class="textquote">"Sans Saint-Antoine, je serais seule ou placée en institution."</div>
+        </div>
+
+        <div class="container text">
+            <div class="jumbotron">
+                <h1>Notre mission</h1>
+                <p>{% placeholder "mission" %}</p>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <a target="_blank" href="http://www.canadahelps.org/CharityProfilePage.aspx?CharityID=s41816&Language=en">
+                        <div class="well well-lg scaleanim">
+                            <img src="{% static 'img/heart.png' %}">
+                            <h3>Faites un don</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <div class="well well-lg scaleanim">
+                        <img src="{% static 'img/hands.png' %}">
+                        <h3>Devenez bénévole</h3>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="well well-lg scaleanim">
+                        <img src="{% static 'img/umbrella.png' %}">
+                        <h3>Actualités et événements</h3>
+                    </div>
+                </div>
+                <!--                    <div class="col-sm-3">
+                        <div class="well well-lg">
+                            <img src="img/centraide.png">
+                        </div>
+                    </div>-->
+            </div>
+        </div>
+    </div>
+
+    <div id="services" class="container section">
+        <div class="container image">
+        </div>
+
+        <div class="container text">
+
+            <h1>Services et Activités</h1>
+
+            <h2>Nouveautés</h2>
+            <h2>Newsletter</h2>
+            <h2>Calendrier des activités</h2>
+            <h2>Activités/horaires</h2>
+            <div class="well well-lg">
+                <ul class="nav nav-pills">
+                    <li class="active"><a data-toggle="pill" href="#community">Au service de la communauté</a></li>
+                    <li><a data-toggle="pill" href="#hlm">Habitations à loyer modique (HLM)</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="community" class="tab-pane fade in active">
+                        <h2>Au service de la communauté</h2>
+                        <div>{% placeholder "community" %}</div>
+                    </div>
+                    <div id="hlm" class="tab-pane fade">
+                        <h2>Habitations à loyer modique (HLM)</h2>
+                        <div>{% placeholder "hlm" %}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="who" class="container section">
+        <div class="container image">
+        </div>
+
+        <div class="container text">
+            <h1>Qui sommes-nous?</h1>
+
+            <div class="well well-lg">
+                <h2>Saint-Antoine 50+ : Au service de la communauté</h2>
+                <div>{% placeholder 'st-antoine' %}</div>
+            </div>
+
+            <div class="well well-lg">
+                <div class="row">
+                    {% placeholder "contact" %}
+                    <div class="col-md-8">
+                        <div id="map"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Saint Antoine 50+</h3>
+                        <p>2338, rue Saint-Antoine Ouest, Montréal (Québec) H3J 1A8</p>
+
+                        <h3>Heures d'ouverture</h3>
+                        <p>Lundi à vendredi: 8h30-12h 13h-16h30</p>
+
+                        <h3>Contact</h3>
+                        <p>Téléphone: 514 933-7351</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class='well well-lg'>
+
+                <h2>Photos</h2>
+                <!--div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="img/slider_servicesactivities.jpg" alt="Activities">
+                            </div>
+
+                            <div class="item">
+                                <img src="img/slider_volunteer.jpg" alt="Volunteer">
+                            </div>
+
+                            <div class="item">
+                                <img src="img/slider_donations.jpg" alt="Donations">
+                            </div>
+                        </div>
+                    </div -->
+
+                <h2>Support à domicile</h2>
+                <div class="well well-lg">
+                    <ul class="nav nav-pills">
+                        <li class="active"><a data-toggle="pill" href="#team">Equipe</a></li>
+                        <li><a data-toggle="pill" href="#ca">Conseil d'administration</a></li>
+                        <li><a data-toggle="pill" href="#partners">Partenaires</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="team" class="tab-pane fade in active">
+                        </div>
+                        <div id="ca" class="tab-pane fade in">
+                        </div>
+                        <div id="partners" class="tab-pane fade in">{% placeholder "partners" %}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

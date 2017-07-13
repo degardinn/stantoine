@@ -175,7 +175,7 @@ CMS_LANGUAGES = {
 }
 
 CMS_TEMPLATES = (
-    ('default.html', 'Default'),
+    ('page.html', 'Page'),
 )
 
 CMS_PERMISSION = True
