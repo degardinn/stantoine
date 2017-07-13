@@ -61,13 +61,14 @@ are the main guidelines concerning the new website:
 3. in a terminal, run this command to start the server (under *MacOS*): `docker run -p 80:80 --rm --name stantoine -v $(pwd):/usr/src/app stantoine`
 4. in a browser, access [http://localhost](http://localhost) to see the website
 5. In a terminal, run this command to see the server logs: `docker logs -f stantoine`
-6. A shell can be opened in this container by running `docker exec -ti stantoine sh`
+6. a shell can be opened in this container by running `docker exec -ti stantoine sh`
 
 ##### With *docker-compose*
 
 1. first ensure that **Docker for Mac**/**Docker for Windows** is installed. Refer to this tool instructions in case of need to run the **Docker** commands.
-2. in a terminal, at the project root, run `docker-compose up` (the project is both built and run)
-3.  A shell can be opened in this container by running `docker exec -ti stantoine_web_1 sh` (where *stantoine* is the name of the project directory) 
+2. in a terminal, at the project root, run `docker-compose up` (the project will built on the first time)
+3. a shell can be opened in this container by running `docker exec -ti stantoine_web_1 sh` (where *stantoine* is the name of the project directory) 
+4. the next time the container will have to be built (in case of change in *requirements.txt*), run the project with `docker-compose up --build`
 
 **/!\ It may not work under *Windows*, due to the file system differences (not tested)**
 

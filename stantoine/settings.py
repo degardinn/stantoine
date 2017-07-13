@@ -148,12 +148,14 @@ INSTALLED_APPS = (
     'djangocms_snippet',
     'djangocms_googlemap',
     'djangocms_video',
+    'aldryn_bootstrap3',
     'stantoine'
 )
 
 LANGUAGES = (
     ## Customize this
     ('en', gettext('en')),
+    ('fr', gettext('fr')),
 )
 
 CMS_LANGUAGES = {
@@ -165,6 +167,13 @@ CMS_LANGUAGES = {
             'public': True,
             'redirect_on_fallback': True,
             'code': 'en',
+        },
+        {
+            'name': gettext('fr'),
+            'hide_untranslated': False,
+            'public': True,
+            'redirect_on_fallback': True,
+            'code': 'fr',
         },
     ],
     'default': {
