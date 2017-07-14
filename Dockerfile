@@ -1,7 +1,10 @@
 FROM python:3.4-alpine
 
 RUN apk -U add tzdata build-base zlib-dev jpeg-dev
-RUN cp /usr/share/zoneinfo/UTC /etc/localtime
+
+ARG TIMEZONE='UTC'
+
+RUN cp /usr/share/zoneinfo/$TIMEZONE /etc/localtime
 RUN pip install djangocms-installer
 
 EXPOSE 80

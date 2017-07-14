@@ -1,7 +1,10 @@
 version: '3'
 services:
   web:
-    build: .
+    build:
+      context: .
+      args: 
+        TIMEZONE: America/Montreal
     image: stantoine
     ports:
       - "80:80"
