@@ -15,16 +15,17 @@
     <div id="mission" class="container section">
         <div class="image">{% placeholder "quote" %}</div>
         <div id="mission-text" class="container text">
+            <a class="anchor" id="missionAnchor"></a>
             {% placeholder "Our mission" %}
         </div>
     </div>
 
     <div id="services" class="container section">
         <div class="container image"></div>
-        <div id="services-text" class="container text">
+        <div class="container text">
+            <a class="anchor" id="servicesAnchor"></a>
             {% placeholder "Services and activities" %}           
-            <h1>Services et Activités</h1>
-            <h2>Nouveautés</h2>
+            <h2>News</h2>
             <h2>Newsletter</h2>
             <h2>Calendrier des activités</h2>
             <h2>Activités/horaires</h2>
@@ -34,9 +35,13 @@
     <div id="who" class="container section">
         <div class="container image"></div>
         <div id="who-text" class="container text">
+            <a class="anchor" id="whoAnchor"></a>
             {% placeholder "Who we are" %}           
                 <h2>Contact form</h2>
+                <h2>Volunteering form</h2>
                 <h2>Photos</h2>
+                <p>&copy; 2017 Nicolas Degardin</p>
         </div>
     </div>
+
 {% endblock content %}

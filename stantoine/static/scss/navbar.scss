@@ -5,6 +5,13 @@ div#mainNavbar.navbar-collapse {
     background-color: $primaryColor;
 }
 
+.anchor {
+    display: block;
+    position: relative;
+    top: -93px;
+    visibility: hidden;
+}
+
 div#mainNavbar.navbar-collapse ul.nav li a {
     line-height: 83px;
     padding: 0 10px 0 10px;
