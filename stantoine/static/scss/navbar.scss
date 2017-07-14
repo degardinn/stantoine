@@ -1,5 +1,8 @@
+@import "dotbackground";
+@import "colors";
+
 div#mainNavbar.navbar-collapse {
-    background-color: rgba(174,0,80, 1);
+    background-color: $primaryColor;
 }
 
 div#mainNavbar.navbar-collapse ul.nav li a {
@@ -8,8 +11,22 @@ div#mainNavbar.navbar-collapse ul.nav li a {
     font-size: large;
 }
 
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: inherit;
+}
+
+.navbar-inverse .navbar-toggle {
+    border: none;
+}
+
+.navbar-inverse .navbar-nav li a {
+    color: #DDDDDD;
+}
+
 .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
     max-height: none;
+    border: 0;
+    border-bottom: 10px solid white;
 }
 
 .navbar-right {
@@ -20,7 +37,7 @@ div#mainNavbar.navbar-collapse ul.nav li a {
     padding: 0;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1000px) {
   .navbar-header {
       float: none;
   }
@@ -44,7 +61,8 @@ div#mainNavbar.navbar-collapse ul.nav li a {
   }
   .navbar-nav {
       float: none!important;
-      margin-top: 7.5px;
+      margin-top: 0;
+      margin-bottom: 0;
   }
   .navbar-nav>li {
       float: none;

@@ -3,21 +3,21 @@
     <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span >Toggle navigation</span>
+                    <span>Menu</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span> 
-                </button>
+            </button>
             <a href="#" class="navbar-left navbar-brand">
                 <img alt="Centre Saint-Antoine 50+" src="{% static 'img/logo.png' %}">
             </a>
         </div>
-        <div class="collapse navbar-collapse" id="mainNavbar">
+        <div data-toggle="collapse" data-target=".navbar-collapse.in" class="collapse navbar-collapse" id="mainNavbar">
             <ul class="nav navbar-nav">
                 {% show_menu 0 1 100 100 "menu.html" %}
-                <li class="active"><a href="#mission">Notre mission</a></li>
-                <li><a href="#services">Services et activités</a></li>
-                <li><a href="#who">Qui sommes-nous?</a></li>
+                <li class="active"><a href="#mission-text">Notre mission</a></li>
+                <li><a href="#services-text">Services et activités</a></li>
+                <li><a href="#who-text">Qui sommes-nous?</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a target="_blank" href="http://www.canadahelps.org/CharityProfilePage.aspx?CharityID=s41816&Language=en"><span class="glyphicon glyphicon-heart"></span> Don</a></li>

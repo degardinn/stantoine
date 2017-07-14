@@ -13,102 +13,30 @@
     {% endaddtoblock %}
 
     <div id="mission" class="container section">
-        <div class="image">
-            <div class="textquote">"Sans Saint-Antoine, je serais seule ou placée en institution."</div>
-        </div>
-
-        <div class="container text">
-            {% placeholder "first-block" %}           
+        <div class="image">{% placeholder "quote" %}</div>
+        <div id="mission-text" class="container text">
+            {% placeholder "Our mission" %}
         </div>
     </div>
 
     <div id="services" class="container section">
-        <div class="container image">
-        </div>
-
-        <div class="container text">
-
+        <div class="container image"></div>
+        <div id="services-text" class="container text">
+            {% placeholder "Services and activities" %}           
             <h1>Services et Activités</h1>
-
             <h2>Nouveautés</h2>
             <h2>Newsletter</h2>
             <h2>Calendrier des activités</h2>
             <h2>Activités/horaires</h2>
-            <div class="well well-lg">
-                <ul class="nav nav-pills">
-                    <li class="active"><a data-toggle="pill" href="#community">Au service de la communauté</a></li>
-                    <li><a data-toggle="pill" href="#hlm">Habitations à loyer modique (HLM)</a></li>
-                </ul>
-
-                <div class="tab-content">
-                    <div id="community" class="tab-pane fade in active">
-                        <h2>Au service de la communauté</h2>
-                        <div>{% placeholder "community" %}</div>
-                    </div>
-                    <div id="hlm" class="tab-pane fade">
-                        <h2>Habitations à loyer modique (HLM)</h2>
-                        <div>{% placeholder "hlm" %}</div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
     <div id="who" class="container section">
-        <div class="container image">
-        </div>
-
-        <div class="container text">
-            <h1>Qui sommes-nous?</h1>
-
-            <div class="well well-lg">
-                <h2>Saint-Antoine 50+ : Au service de la communauté</h2>
-                <div>{% placeholder 'st-antoine' %}</div>
-            </div>
-
-            <div class="well well-lg">
-                <div class="row">
-                    {% placeholder "contact" %}
-                </div>
-            </div>
-
-            <div class='well well-lg'>
-
+        <div class="container image"></div>
+        <div id="who-text" class="container text">
+            {% placeholder "Who we are" %}           
+                <h2>Contact form</h2>
                 <h2>Photos</h2>
-                <!--div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <img src="img/slider_servicesactivities.jpg" alt="Activities">
-                            </div>
-
-                            <div class="item">
-                                <img src="img/slider_volunteer.jpg" alt="Volunteer">
-                            </div>
-
-                            <div class="item">
-                                <img src="img/slider_donations.jpg" alt="Donations">
-                            </div>
-                        </div>
-                    </div -->
-
-                <h2>Support à domicile</h2>
-                <div class="well well-lg">
-                    <ul class="nav nav-pills">
-                        <li class="active"><a data-toggle="pill" href="#team">Equipe</a></li>
-                        <li><a data-toggle="pill" href="#ca">Conseil d'administration</a></li>
-                        <li><a data-toggle="pill" href="#partners">Partenaires</a></li>
-                    </ul>
-
-                    <div class="tab-content">
-                        <div id="team" class="tab-pane fade in active">
-                        </div>
-                        <div id="ca" class="tab-pane fade in">
-                        </div>
-                        <div id="partners" class="tab-pane fade in">{% placeholder "partners" %}</div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 {% endblock content %}

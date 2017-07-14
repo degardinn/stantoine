@@ -2,12 +2,13 @@
 @import "animation";
 @import "dotbackground";
 @import "navbar";
+@import "colors";
 
 html {
     height: 100%;
     width: 100%;
 }
-
+ 
 h1 {
     border-bottom: double 5px white;
     padding-bottom: 15px;
@@ -16,7 +17,7 @@ h1 {
     text-align: center;
     font-size: 63px;
 }
-
+ 
 body { 
     margin-top: 70px;
     font-family: Sta;
@@ -37,7 +38,7 @@ body {
         }
     }
 }
-
+ 
 .container {
     padding: 0;
     margin: 0;
@@ -67,12 +68,24 @@ body {
     min-height: 50%;
 }
 
+.jumbotron {
+    margin: 0;
+    border: 0;
+    padding:10px;
+    text-align: center;
+    min-height: 50%;
+    font-size: small;
+    background-color: transparent;
+}
+
 #mission {
     min-height: 100vh;
     
-    .textquote {
-        padding-top: 20vh;  
-        padding-left: 60vw;
+    .image p {
+        display: inline;
+        position: absolute;
+        top: 20vh;  
+        left: 60vw;
         padding-right: 10vw;
         text-align: right;
         color: #FFF;
@@ -84,54 +97,50 @@ body {
     
     .image {
         background-image: url("/static/img/slider_servicesactivities.jpg"); 
-        min-height: 60vh;
-    }
-    
-    .jumbotron {
-        margin: 0;
-        border: 0;
-        padding:10px;
-        text-align: center;
-        min-height: 50%;
-        font-size: small;
-        background-color: transparent;
-    }
-      
+        min-height: 70vh;
+    }   
+     
     .text {
-        @include dotbackground(rgba(174,0,80, 1), rgba(185, 0, 90, 1));        
+        @include dotbackground($backgroundColor, $primaryColor);        
     }
 }
-
 
 #services {
     .image { 
         background-image: url("/static/img/slider_donations.jpg");
-        min-height: 80vh;
+        min-height: 100vh;
     }
     
     .container.text{
-        @include dotbackground(rgba(174,0,80, 1), rgba(185, 0, 90, 1));
+        @include dotbackground($backgroundColor, $primaryColor);
     }
 }
-
+ 
 #who {
     .image {
         background-image: url("/static/img/slider_volunteer.jpg");     
-        min-height: 80vh;
+        min-height: 100vh;
     }
     
     .container.text{
-        @include dotbackground(rgba(174,0,80, 1), rgba(185, 0, 90, 1));
+        @include dotbackground($backgroundColor, $primaryColor);
     } 
 }
 
-#mission .image, #services .image, #who .image { 
-    position: relative;
-    opacity: 1;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+#mission, #services, #who { 
+    .text {
+        border-top: 10px solid white;
+        border-bottom: 10px solid white;
+    }
+
+    .image {
+        position: relative;
+        opacity: 1;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 }
 
 .caption span.border {
@@ -143,9 +152,9 @@ body {
 }
 
 .well {
-    color: black;
+    color: $wellFontColor;
     background: none;
-    background-color: white;
+    background-color: $wellBackgroundColor;
 }
 
 .well:hover {
@@ -161,4 +170,3 @@ body {
         background-attachment: scroll;
     }
 }
-
