@@ -6,7 +6,6 @@
     "python.linting.pylintEnabled": false,
     "html.format.enable": false,
     "files.exclude": {
-        "nbproject": true,
         "**/.git": true,
         "**/.svn": true,
         "**/.hg": true,
