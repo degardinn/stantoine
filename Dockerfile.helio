@@ -1,0 +1,1 @@
+FROM ndegardin/apache-wsgi:django

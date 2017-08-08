@@ -28,7 +28,7 @@ SECRET_KEY = 'ym#^uj4ix54s^!to-p2xjksevd2zybnxey69*68lndxg8ie5kb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -190,10 +190,9 @@ CMS_PLACEHOLDER_CONF = {}
 
 DATABASES = {
     'default': {
-        'CONN_MAX_AGE': 0,
         'ENGINE': 'django.db.backends.sqlite3',
-        'HOST': 'localhost',
-        'NAME': 'project.db',
+        'HOST': 'localhost', 
+        'NAME': os.path.join(BASE_DIR, 'db', 'project.db'),
         'PASSWORD': '',
         'PORT': '',
         'USER': ''

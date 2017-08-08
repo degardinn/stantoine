@@ -1,19 +1,22 @@
-"""
-WSGI config for stantoine project.
+#!/usr/bin/python3.6
 
-It exposes the WSGI callable as a module-level variable named ``application``.
+import os, sys, logging
 
-For more information on this file, see
-https://docs.djangoproject.com/en/1.8/howto/deployment/wsgi/
-"""
+application = None 
 
-import os, sys
+try:
+    dirName = os.path.abspath(os.path.dirname(__file__) + '/..')
+    sys.path.insert(1, dirName)
+    sys.path.insert(1, dirName + "/libs")
+    from django.core.wsgi import get_wsgi_application
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "stantoine.settings")
+    application = get_wsgi_application()
+except Exception as e:
+    err = e
+    def _application(env, start_response):
+        global err
+        start_response('200 OK', [('Content-Type','text/html')])
+        return [b"Error: ", str(err).encode('ascii')]
 
-sys.path.insert(1, os.path.abspath("."))
-sys.path.insert(1, os.path.abspath("./libs"))
+    application = _application
 
-from django.core.wsgi import get_wsgi_application
-
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "stantoine.settings")
-
-application = get_wsgi_application()
