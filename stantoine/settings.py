@@ -146,6 +146,7 @@ INSTALLED_APPS = (
     'djangocms_googlemap',
     'djangocms_video',
     'aldryn_bootstrap3',
+    'aldryn_background_image',
     'stantoine'
 )
 
@@ -182,6 +183,7 @@ CMS_LANGUAGES = {
 
 CMS_TEMPLATES = (
     ('page.html', 'Page'),
+    ('home.html', 'Home'),
 )
 
 CMS_PERMISSION = True

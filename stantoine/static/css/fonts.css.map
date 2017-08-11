@@ -1,8 +1,8 @@
 {
     "version": 3,
-    "mappings": "AAAA,UAAU,CACR,WAAW,CAAE,GAAG,CAChB,GAAG,CAAE,kDAAkD,CAGzD,UAAU,CACR,WAAW,CAAE,GAAG,CAChB,GAAG,CAAE,+CAA+C,CACpD,WAAW,CAAE,IAAI,CAGnB,UAAU,CACR,WAAW,CAAE,GAAG,CAChB,GAAG,CAAE,iDAAiD,CACtD,UAAU,CAAE,MAAM,CAGpB,UAAU,CACR,WAAW,CAAE,GAAG,CAChB,GAAG,CAAE,qDAAqD,CAC1D,WAAW,CAAE,IAAI,CACjB,UAAU,CAAE,MAAM",
+    "mappings": "",
     "sources": [
-        "../scss/fonts.scss"
+        "../scss/navbar.scss"
     ],
     "names": [],
     "file": "fonts.css"

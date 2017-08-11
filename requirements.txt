@@ -17,3 +17,4 @@ html5lib>=0.999999,<0.99999999
 django-sekizai>=0.9
 six
 aldryn-bootstrap3
+aldryn-background-image
