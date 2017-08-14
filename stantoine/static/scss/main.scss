@@ -232,33 +232,8 @@ body {
 }
 
 p {
-    margin-left: 40px;
-    margin-right: 40px;
-}
-
-h1 {
-    font-family: "PT Serif", serif;
-    line-height: 35px;
-    margin-bottom: 35px;
-    margin-left: 40px;
-    margin-right: 40px;
-    font-size: 40px;
-    text-align: center;
-    margin-bottom: 35px;
-    padding-right: 20px;
-    background-color: $bgColor1;
-}
-
-body .container .row h1::before {
-    border-bottom-color: white;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-
-}
-
-body .container .row h1 {
-    font-size: 34px;
-    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 div.row {
@@ -266,13 +241,28 @@ div.row {
     margin-right: 0;
 }
 
-body div.container {
-    margin: 0;
+.jumbotron {
     padding-top: 0;
-    padding-bottom: 0px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.container .jumbotron {
     padding-left: 0;
     padding-right: 0;
+}
 
+div.row div section {
+    height: 60vh;
+    background-color: white;
+}
+
+div.container {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
     width: 100%;
 
     div {
@@ -281,17 +271,74 @@ body div.container {
     }
 }
 
-div.row div section {
-    height: 60vh;
-    background-color: white;
+h1 {
+    font-family: "PT Serif", serif;
+    line-height: 35px;
+    margin-bottom: 35px;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 35px;
+    white-space: nowrap;
+    display: table;
+    width: 100%;
 }
 
-body div.container:nth-child(2n) {
+h1:before, h1:after {
+    display: table-cell;
+    background: url(https://dummyimage.com/2x2/fff/fff&text=+) repeat-x center;
+    width: 50%;
+    content: ' ';
+}
+
+#content>div.container {
+    >div.row>div>h1:before {
+        display: none;
+    }
+    
+    >div.row>div>h1:after {
+        width: 100%;
+    }
+}
+
+#content>div.container:nth-child(2n) {
     background-color: $bgColor1;
     color: $textColor1;
+
+    >h1:before, >h1:after {
+        background: url(https://dummyimage.com/2x2/fff/fff&text=+) repeat-x center;
+    }
+
+    h1 {
+        color: $textColor1;
+    }
 }
 
-body div.container:nth-child(2n+1) {
+#content>div.container:nth-child(2n+1) {
     background-color: $bgColor2;
     color: $textColor2;
+
+    >h1:before, >h1:after {
+        background: url(https://dummyimage.com/2x2/900020/900020&text=+) repeat-x center;
+    }
+
+    h1 {
+        color: $textColor3;
+    }
+}
+
+#content>div.container {
+    padding: 20px 80px 20px 80px;
+}
+
+#content>div.container>div.row>div {
+    padding: 20px 40px 20px 40px;
+}
+
+#content>div.container>div.row>div {
+    padding: 20px 40px 20px 40px;
+}
+
+#content>div.container>div.row h1 {
+    font-size: 34px;
+    text-align: left;
 }
