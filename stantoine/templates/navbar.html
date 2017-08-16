@@ -1,6 +1,6 @@
 {% load cms_tags static sekizai_tags menu_tags i18n %}
 
-    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <nav class="navbar navbar-fixed-top" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span>Menu</span>
@@ -17,10 +17,12 @@
                 {% show_menu 0 1 100 100 "menu.html" %}
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a target="_blank" href="http://www.canadahelps.org/CharityProfilePage.aspx?CharityID=s41816&Language=en"><span class="glyphicon glyphicon-heart"></span> Don</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Nous contacter</a></li>
-                <li><a {% if LANGUAGE_CODE != "en" %}href="/en"{% endif %}><span {% if LANGUAGE_CODE == "en" %}class="glyphicon glyphicon-chevron-right"{% endif %}></span>EN</a></li>
-                <li><a {% if LANGUAGE_CODE != "fr" %}href="/fr"{% endif %}><span {% if LANGUAGE_CODE == "fr" %}class="glyphicon glyphicon-chevron-right"{% endif %}></span>FR</a></li>
+                <li><a target="_blank" href="http://www.canadahelps.org/CharityProfilePage.aspx?CharityID=s41816&Language=en"><span class="glyphicon glyphicon-heart"></span></a></li>
+                <li><a target="_blank" href="http://www.facebook.com"><span class="glyphicon glyphicon-thumbs-up"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-envelope"></span></a></li>
+
+                {% if LANGUAGE_CODE != "en" %}<li><a href="/en">EN</a></li>{% endif %}
+                {% if LANGUAGE_CODE != "fr" %}<li><a href="/fr">FR</a></li>{% endif %}
             </ul>
         </div>
     </nav>

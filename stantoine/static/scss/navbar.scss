@@ -1,5 +1,29 @@
-// @import "dotbackground";
-// @import "colors";
+@import "colors";
+
+.navbar {
+    background-color: $bgColor1;
+    border: 0;
+    padding-right: 10px;
+}
+
+.navbar ul a:not(.glyphicon) {
+    text-transform: uppercase;
+}
+
+.navbar ul a {
+    color: $textColor1;
+    letter-spacing: 2px;
+    line-height: 20px;
+    font-size: 15px;
+    font-family: Roboto, sans-serif;
+}
+
+.navbar ul a:hover {
+    color: $textColor2;
+    background-color: $bgColor2;
+    -webkit-transition: 500ms;
+    transition: 500ms;
+}
 
 // div#mainNavbar.navbar-collapse {
 //     background-color: $primaryColor;
