@@ -26,6 +26,38 @@ p {
     flex-shrink: 1;
     flex-basis: auto;
 }
+
+.jumbotron .teaser {
+    margin-right: 20vw;
+    margin-left: 20vw;
+    background-color: rgba(144, 0, 32, 0.6);
+    position: absolute;
+    top: 20vh;
+    width: auto;
+    z-index: 1;
+    font-size: 24px;
+
+    h1 {
+        white-space: normal;
+    }
+
+    @media screen and (min-width: 768px)
+    {
+        h1 {
+            line-height: 60px;
+            font-size: 50px;
+            white-space: normal;
+        }
+    }
+
+    h1:before {
+        content:none;
+    }
+
+    h1:after {
+        content:none;
+    }
+}
  
 .btn {
     margin-top: 26px;
