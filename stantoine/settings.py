@@ -183,7 +183,6 @@ CMS_LANGUAGES = {
 
 CMS_TEMPLATES = (
     ('page.html', 'Page'),
-    ('home.html', 'Home'),
 )
 
 CMS_PERMISSION = True
