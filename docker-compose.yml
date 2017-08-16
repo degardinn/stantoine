@@ -1,12 +1,8 @@
 version: '3'
 services:
   web:
-    build:
-      context: .
-      args: 
-        TIMEZONE: America/Montreal
-    image: stantoine
+    image: ndegardin/apache-wsgi:django
     ports:
       - "80:80"
     volumes:
-      - ".:/usr/src/app"
+      - ".:/srv"
